@@ -1,13 +1,13 @@
 # bot.py
-from os import listdir
+from os import listdir, envirion
 
 import discord
 import json
 
-TOKEN = ''
-mon_files = listdir('/home/pi/Desktop/bot/Tuxemon-development/mods/tuxemon/db/monster')
-tech_files = listdir('/home/pi/Desktop/bot/Tuxemon-development/mods/tuxemon/db/technique')
-images = '/home/pi/Desktop/bot/Tuxemon-development/mods/tuxemon/gfx/sprites/battle/'
+TOKEN = environ['token']
+mon_files = listdir('/app/mods/tuxemon/db/monster')
+tech_files = listdir('/app/mods/tuxemon/db/technique')
+images = '/app/mods/tuxemon/gfx/sprites/battle/'
 client = discord.Client()
 
 
@@ -33,10 +33,10 @@ async def on_message(message):
                 catch_rate = data['catch_rate']
                 types = data['types']
                 text = str(slug + ', the ' + category + ' Tuxemon\n')\
-                    .join(str("Types:" + str(types)))\
-                    .join(str("Weight: " + str(weight)))\
-                    .join(str("Catch Rate: " + str(catch_rate) + '%'))\
-                    .join(str('Learnable Moves: '))
+                    + str("Types:" + str(types))\
+                    + str("Weight: " + str(weight))\
+                    + str("Catch Rate: " + str(catch_rate) + '%')\
+                    + str('Learnable Moves: ')
                 for j in range(len(move_set)):
                     text.join(str(move_set[j]))
 
