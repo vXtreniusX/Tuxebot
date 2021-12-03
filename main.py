@@ -1,5 +1,5 @@
 # bot.py
-from os import listdir, envirion
+from os import listdir, environ
 
 import discord
 import json
