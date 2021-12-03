@@ -5,9 +5,9 @@ import discord
 import json
 
 TOKEN = environ['token']
-mon_files = listdir('/app/mods/tuxemon/db/monster')
-tech_files = listdir('/app/mods/tuxemon/db/technique')
-images = '/app/mods/tuxemon/gfx/sprites/battle/'
+mon_files = listdir('/app/Tuxemon/mods/tuxemon/db/monster')
+tech_files = listdir('/app/Tuxemon/mods/tuxemon/db/technique')
+images = '/app/Tuxemon/mods/tuxemon/gfx/sprites/battle/'
 client = discord.Client()
 
 
