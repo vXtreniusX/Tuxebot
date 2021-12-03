@@ -1,0 +1,4 @@
+[submodule "Tuxemon"]
+	path = Tuxemon
+	url = https://github.com/Tuxemon/Tuxemon
+	branch = development
